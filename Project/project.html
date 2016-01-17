@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>B.E EXTC PROHECT A-17</title>
+<link rel="stylesheet" type="text/css" href="project.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<script>
+$(document).ready(function(){
+var x;
+$(".menu").click(function(){
+var m=$(this).attr('id');
+if(x!=m)
+{
+t1=0;
+if(x=='home')
+t1=100;
+if(x=='device1')
+t1=225;
+if(x=='device2')
+t1=350;
+if(x=='device3')
+t1=475;
+
+$("#info").fadeOut("slow");
+$("#"+x + " > p").fadeOut(200);
+$("#"+x).stop(false,true).animate({height:'-=375px',top:t1},"slow").animate({width:'-=300px'},"slow").animate({left:'-=275px'},"slow");
+if(m=='home')
+t=100;
+if(m=='device1')
+t=100;
+if(m=='device2')
+t=100;
+if(m=='device3')
+t=100;
+$("#"+m).stop(true,true).animate({left:'+=275px'},"slow").animate({width:'500px'},"slow").animate({height:'+=375px',top:t},"slow");
+$("#"+m + " > p").delay(2000).fadeIn("slow");
+$("#"+m + " > form").delay(2000).fadeIn("slow");
+x=m;}
+});
+$("#ON").click(function(){
+$.ajax({ url: 'lamp_ON.php' });
+return false;
+});
+$("#OFF").click(function(){
+$.ajax({ url: 'lamp_OFF.php' });
+return false;
+});
+$("#TEMP").click(function(){
+$.ajax({ url: 'temp_read.php' });
+$("#temp").load("file.txt");
+return false;
+});
+$("#WATER").click(function(){
+$.ajax({ url: 'water_level.php' });
+$("#water").load("file.txt");
+return false;
+});
+});
+       
+</script>
+</head>
+<body>
+<h1>INTERNET BASED HOME AUTOMATION SYSTEM</h1>
+<div id="container">
+<div id="home" class="menu"><br>HOME
+<p>DEVICES</p></div>
+<div id="device1" class="menu" ><br>DEVICE 1
+<p>LIGHT/BULB
+<a href="" id="ON">~ON~</a>   
+<?php
+$file = fopen("testFile.txt", "r") or exit("Unable to open file!");
+fclose($file);
+?>
+<a href=""" id="OFF">~OFF~</a>
+</p></div>
+<div id="device2" class="menu"><br>DEVICE 2
+<p>WATER LEVEL DETECTOR<a href="" id="WATER">~VIEW~</a>
+</p><p id="water"></p></div>
+<div id="device3" class="menu"><br>DEVICE 3
+<p>TEMPERATURE SENSOR
+<a href="" id="TEMP">~VIEW~</a>
+</p>
+<p id="temp"></p></div>
+</div>
+<div id="info" >A-17<br>Anish Advani<br>Rohan Bafna<br>Janak Bhalla<br>Kunal Gehani
+</div>
+</body>
+</html>

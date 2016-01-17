@@ -1,0 +1,90 @@
+body 
+{    
+background-color:#ECECEC       
+}
+h1
+{    
+font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px;
+text-align:center;
+}
+p
+{
+font-size:18px;display:none;
+}
+
+#container
+{
+margin-left:auto;
+margin-right:auto;
+width:70%;
+height:90%;
+border-radius:75;
+opacity:0.8;
+box-shadow: 2px 2px 2px 2px #888888;
+background-image: -moz-linear-gradient(top, white 0%, #C9C9C9 100% );
+background-image: -webkit-gradient(linear, left top, left bottom,  color-stop(0, white), color-stop(1, #C9C9C9));
+}
+#home
+{
+position:absolute;
+top:100px;
+left:275px;
+}
+#device1
+{
+position:absolute;
+top:225px;
+left:275px;
+}
+#device2
+{
+position:absolute;
+top:350px;
+left:275px;
+}
+#device3
+{
+position:absolute;
+top:475px;
+left:275px;
+}
+#info
+{
+position: absolute;
+top:150px;
+left:525px;
+height:375;
+width:550;
+color: black;    
+font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px; font-size:26px;
+text-shadow: 0 -1px 3px #202020;
+text-align: center;
+line-height:150%;
+ }
+.menu
+{    
+font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px; font-size:24px;
+text-shadow: 0 -1px 3px #202020;
+text-align:center;
+color:white;
+height:100;
+width:200;
+border-radius:25;
+float:left;
+-moz-box-shadow: 0px 3px 3px #cecece;
+-webkit-box-shadow: 0px 3px 3px #cecece;
+box-shadow: 0 3px 4px #8b8b8b;
+border-right:1px solid #5d5d5d; border-left:1px solid #929292; border-bottom:1px solid #575757; border-top:1px solid #797979;
+background-image: -moz-linear-gradient(center bottom, #787878 0%, #5E5E5E 50%, #707070 51%, #838383 100%);
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #787878), color-stop(0.5, #5E5E5E), color-stop(0.51, #707070), color-stop(1, #838383));
+background-color:#5f5f5f;
+ }
+
+.menu:hover {
+background-image: -moz-linear-gradient(center bottom, #3F3F3F 0%, #383838 50%, #434343 51%, #555555 100% );
+background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #3F3F3F), color-stop(0.5, #383838), color-stop(0.51, #434343), color-stop(1, #555555));
+background-color:#383838; 
+-moz-box-shadow: inset 0 0 5px 5px #535353;
+-webkit-box-shadow: inset 0 0 5px 5px #535353;
+box-shadow: inset 0 0 5px 5px #535353;
+}
